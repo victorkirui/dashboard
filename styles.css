@@ -20,13 +20,75 @@ body {
 
 .header {
   grid-area: header;
-  background: #afafaf;
+  background: #fff;
 
   display: grid;
   grid-template-columns: 4fr 2fr;
 
+  padding: 10px 20px;
+
   .left-section {
-    background: green;
+    display: grid;
+    grid-template-rows: 30px auto;
+    gap: 10px;
+
+    .search {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      label {
+        display: flex;
+      }
+
+      input[type="search"] {
+        background-color: #e2e8f0;
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        padding: 8px 10px;
+        flex: 1;
+      }
+    }
+    .name-section {
+      display: flex;
+      gap: 10px;
+
+      img {
+        background-color: #facc15;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  .right-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+
+    .top {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+    }
+
+    .btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+
+      button {
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        background-color: #1992d4;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -34,6 +96,27 @@ body {
   background: #1992d4;
   color: white;
   grid-area: side-nav;
+  padding: 20px;
+
+  display: grid;
+  grid-template-rows: 50px minmax(200px, 320px) minmax(200px, 320px);
+  grid-gap: 20px;
+
+  ul li {
+    list-style-type: none;
+    line-height: 2;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .flex {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 17px 0;
+  }
 }
 
 .main-content {
@@ -59,6 +142,19 @@ body {
         border-left: 6px solid #f0b429;
         padding: 20px;
         border-radius: 8px;
+        display: grid;
+        grid-template-rows: 100px auto;
+        gap: 25px;
+
+        .icons {
+          display: flex;
+          justify-content: flex-end;
+          gap: 10px;
+
+          img:hover {
+            cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -81,6 +177,39 @@ body {
       background-color: #fff;
       padding: 20px;
       border-radius: 8px;
+
+      .flex {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin: 20px 0;
+
+        img {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+        }
+
+        img.one {
+          background-color: #e0f2fe;
+        }
+
+        img.two {
+          background-color: #facc15;
+        }
+
+        img.three {
+          background-color: #a3a3a3;
+        }
+        img.four {
+          background-color: #fda4af;
+        }
+      }
     }
   }
+}
+
+img {
+  height: 20px;
+  color: #fff;
 }
